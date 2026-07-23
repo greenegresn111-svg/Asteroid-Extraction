@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroid Extraction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        
+        <section class="game_space">
+            <div class="resource_counter"><span id="resource_count"> 0</span></div>
+            <img class="asteroid" src="images/asteroid.png" alt="Asteroid" onclick="extractResource()">
+            <div class="dyson_bar"><span>Dyson Swarm Completion 0/1000</span></div>
+            <button class="reset_button" onclick="reset()">Reset</button>
+            <p class="version">v.0.1</p>
+        </section>
+
+        <div class="bar"></div>
+
+        <section class="store">
+            <h1>Store</h1>
+            <div class="store_item">
+                <h2>Drill Upgrade</h2>
+                <p>Increase the efficiency of your drill to extract more resources from the asteroid.</p>
+                <button>Cost: 100</button>
+            </div>
+            <div class="store_bar"></div>
+            <div class="store_item">
+                <h2>Auto Drill</h2>
+                <p>Automatically extracts resources from the asteroid over time.</p>
+                <button>Cost: 200</button>
+            </div>
+            <div class="store_bar"></div>
+            <div class="store_item">
+                <h2>Advance Technology</h2>
+                <p>Unlock advanced technologies to explore more valuable asteroids. (Not implemented yet.. Sorry)</p>
+                <button>Cost: N/A</button>
+            </div>
+        </section>
+    
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
