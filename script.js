@@ -33,7 +33,7 @@ function buyAutoDrill() {
 }
 
 setInterval(() => {
-    resource_count += auto_drill_count * (1 + drill_level);
+    resource_count += auto_drill_count;
     document.getElementById("resource_count").textContent = resource_count;
 }, 1000);
 
