@@ -4,7 +4,7 @@ let auto_drill_cost = 200;
 let drill_level = 0;
 let auto_drill_count = 0;
 let technology_age = 0;
-let technology_upgrade_cost = 300;
+let technology_upgrade_cost = 500;
 
 document.getElementById("drill_upgrade_cost").textContent = drill_upgrade_cost;
 document.getElementById("auto_drill_cost").textContent = auto_drill_cost;
@@ -107,4 +107,7 @@ function reset() {
     document.getElementById("drill_upgrade_cost").textContent = drill_upgrade_cost;
     document.getElementById("auto_drill_cost").textContent = auto_drill_cost;
     document.getElementById("technology_upgrade_cost").textContent = technology_upgrade_cost;
+    document.getElementById("drill_level").textContent = drill_level;
+    document.getElementById("auto_drill_count").textContent = auto_drill_count;
+    document.getElementById("technology_age").textContent = technology_age;
 }
