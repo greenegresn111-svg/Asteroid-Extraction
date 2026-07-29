@@ -11,13 +11,13 @@
         
         <section class="game_space">
             <div class="resource_counter"><span id="resource_count"> 0</span></div>
-            <img class="asteroid" src="images/asteroid.png" alt="Asteroid" onclick="extractResource(event)">
+            <img id="asteroid" class="asteroid" src="images/asteroid.png" alt="Asteroid" onclick="extractResource(event)">
             <div class="dyson_bar">
                 <div id="dyson_fill"></div>
                 <span id="dyson_text">Dyson Swarm Completion 0%</span>
             </div>
             <button class="reset_button" onclick="reset()">Reset</button>
-            <p class="version">v.0.2</p>
+            <p class="version">v.0.3</p>
             <button id="dev_tool_button" onclick="devTool(event)">Dev Tool</button>
         </section>
 

@@ -67,7 +67,7 @@ function upgradeDrill() {
     if (resource_count >= drill_upgrade_cost) {
         resource_count -= drill_upgrade_cost;
         drill_level += 1;
-        drill_upgrade_cost = Math.floor(drill_upgrade_cost * 1.5);
+        drill_upgrade_cost = Math.floor(drill_upgrade_cost * 1.25);
         document.getElementById("resource_count").textContent = resource_count;
         document.getElementById("drill_upgrade_cost").textContent = drill_upgrade_cost;
         document.getElementById("drill_level").textContent = drill_level;
@@ -78,7 +78,7 @@ function buyAutoDrill() {
     if (resource_count >= auto_drill_cost) {
         resource_count -= auto_drill_cost;
         auto_drill_count += 1;
-        auto_drill_cost = Math.floor(auto_drill_cost * 1.5);
+        auto_drill_cost = Math.floor(auto_drill_cost * 1.25);
         document.getElementById("resource_count").textContent = resource_count;
         document.getElementById("auto_drill_cost").textContent = auto_drill_cost;
         document.getElementById("auto_drill_count").textContent = auto_drill_count;
@@ -111,7 +111,7 @@ setInterval(() => {
 
     updateDysonBar();
 
-    const asteroid = document.getElementById("asteroid");
+    const asteroid = document.querySelector(".asteroid");
     /* checks if asteroid is set then spawns floating text NOT WORKING?!?!??!?!?!??!?!?!??!?!? */ 
     if (asteroid) {
         const rect = asteroid.getBoundingClientRect();
