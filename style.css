@@ -167,6 +167,35 @@ img.asteroid:hover {
     font-size: 16px;
 }
 
+/* Settings Button Styling */
+.game_space #info_button {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    padding: 8px 12px;
+    border: 1px solid #df26ff;
+    border-radius: 6px;
+    background-color: #15061f;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    z-index: 50;
+}
+
+#info_button:hover {
+    background-color: #df26ff;
+    color: #15061f;
+}
+
+.boost_info {
+    font-size: 10px;
+    color: #333333;
+}
+
+.hidden {
+    display: none;
+}
+
 #dev_tool_button {
     position: fixed;
     left: 150px;
@@ -200,7 +229,7 @@ img.asteroid:hover {
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap: 40px;
+    gap: 30px;
 }
 .store_item {
     display: flex;

@@ -17,8 +17,8 @@
                 <span id="dyson_text">Dyson Swarm Completion 0%</span>
             </div>
             <button class="reset_button" onclick="reset()">Reset</button>
-            <p class="version">v.0.3</p>
-            <button id="dev_tool_button" onclick="devTool(event)">Dev Tool</button>
+            <p class="version">v.0.5</p>
+            <button id="info_button" onclick="toggleInfo()">Toggle Info</button>
         </section>
 
         <div class="bar"></div>
@@ -28,24 +28,30 @@
             <div class="store_item">
                 <h2>Drill Upgrade</h2>
                 <h3>Current Level: <span id="drill_level">0</span></h3>
-                <p>Increase the efficiency of your drill to extract more resources from the asteroid.</p>
+                <p>Increase the efficiency of your drill to extract more resources from the asteroid.<br><small class="boost_info hidden">Boost Math: 1 + drill_level<br>(+1 per drill_level)</small></p>
                 <button onclick="upgradeDrill()">Cost: <span id="drill_upgrade_cost">100</span></button>
             </div>
             <div class="store_bar"></div>
             <div class="store_item">
                 <h2>Auto Drill</h2>
                 <h3>Current Amount: <span id="auto_drill_count">0</span></h3>
-                <p>Automatically extracts resources from the asteroid over time.</p>
+                <p>Automatically extracts resources from the asteroid over time.<br><small class="boost_info hidden">Boost Math: (technology_age * 2) * auto_drill_count<br>(+1 per auto_drill_count)</small></p>
                 <button onclick="buyAutoDrill()">Cost: <span id="auto_drill_cost">200</span></button>
             </div>
             <div class="store_bar"></div>
             <div class="store_item">
                 <h2>Advance Technology</h2>
                 <h3>Technology Age: <span id="technology_age">0</span></h3>
-                <p>Unlock advanced technologies to explore more valuable asteroids. (Not implemented yet.. Sorry)</p>
+                <p>Unlock advanced technologies to improve your resource gathering capabilities.<br><small class="boost_info hidden">Boosts other aspects of resource extraction.<br>(2x to drill efficiency and auto drill output)</small></p>
                 <button onclick="advanceTechnology()">Cost: <span id="technology_upgrade_cost">500</span></button>
             </div>
         </section>
+
+        <button id="dev_tool_button" class="hidden" onclick="devTool(event)">Dev Tool</button>
+
+    
+
+    
     
     </main>
     <script src="script.js"></script>

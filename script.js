@@ -102,7 +102,7 @@ function advanceTechnology() {
     if (resource_count >= technology_upgrade_cost) {
         resource_count -= technology_upgrade_cost;
         technology_age += 1;
-        technology_upgrade_cost = Math.floor(technology_upgrade_cost * 2);
+        technology_upgrade_cost = Math.floor(technology_upgrade_cost * 1.5);
         document.getElementById("resource_count").textContent = resource_count;
         document.getElementById("technology_upgrade_cost").textContent = technology_upgrade_cost;
         document.getElementById("technology_age").textContent = technology_age;
@@ -156,6 +156,23 @@ function reset() {
     document.getElementById("technology_age").textContent = technology_age;
 
     updateDysonBar();
+}
+
+function toggleInfo() {
+    const dev_button = document.getElementById("dev_tool_button");
+    if (dev_button) {
+        dev_button.classList.toggle("hidden");
+    }
+
+    const boost_info_button = document.querySelectorAll(".boost_info");
+    boost_info_button.forEach(info => {
+        info.classList.toggle("hidden");
+    });
+
+    const store_spacing = document.querySelectorAll(".store_item");
+    store_spacing.forEach(store_item => {
+        store_item.style.gap = "15px";
+    });
 }
 
 function devTool(event) {
