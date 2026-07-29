@@ -31,7 +31,7 @@ The project automatically adjusts the position of my elements and aligns them ac
 I had four people test my game by completing four goals, which aligned with the progression line of my game. The main confusion point was the lack of indicators for the users' upgrades. They each said every interaction in the game worked flawlessly. The interaction which needs improvement is the clicking of the asteroid, I need to add an indicator which displays how many resources you gather with each click. Each tester recommended that I add a counter which displays how many upgrades have been purchased. As well as fixing the display and layout issues that came with resizing the screen/display.
 
 ## Revisions
-+ Indicators which represents how many resources are gained by the auto drills each second, and each click
++ Indicators which represent how many resources are gained by the auto drills each second, and each click
 + Responsive deign
 + Last store upgrade
 + Win state
