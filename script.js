@@ -25,13 +25,26 @@ function spawnFloatingText(amount, x, y) {
 
 
 
-function extractResource() {
+function extractResource(event) {
+    let amountGained = 0;
+
     if (technology_age >= 1) {
-        resource_count += Math.floor(technology_age * 1) + drill_level;
+        amountGained = Math.floor(technology_age * 1) + drill_level;
     } else {
-        resource_count += 1 + drill_level;
+        amountGained = 1 + drill_level;
     }
+    resource_count += amountGained;
     document.getElementById("resource_count").textContent = resource_count;
+
+    /* grabs the mouse click coordinates */
+    let x = event.clientX;
+    let y = event.clientY;
+
+    /* randomly offset the floating text */
+    x += (Math.random() - 0.5) * 40;
+    y += (Math.random() - 0.5) * 40;
+
+    spawnFloatingText(amountGained, x, y);
 }
 
 function upgradeDrill() {
