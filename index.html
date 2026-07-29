@@ -23,18 +23,21 @@
             <h1>Store</h1>
             <div class="store_item">
                 <h2>Drill Upgrade</h2>
+                <h3>Current Level: <span id="drill_level">0</span></h3>
                 <p>Increase the efficiency of your drill to extract more resources from the asteroid.</p>
                 <button onclick="upgradeDrill()">Cost: <span id="drill_upgrade_cost">100</span></button>
             </div>
             <div class="store_bar"></div>
             <div class="store_item">
                 <h2>Auto Drill</h2>
+                <h3>Current Amount: <span id="auto_drill_count">0</span></h3>
                 <p>Automatically extracts resources from the asteroid over time.</p>
                 <button onclick="buyAutoDrill()">Cost: <span id="auto_drill_cost">200</span></button>
             </div>
             <div class="store_bar"></div>
             <div class="store_item">
                 <h2>Advance Technology</h2>
+                <h3>Technology Age: <span id="technology_age">0</span></h3>
                 <p>Unlock advanced technologies to explore more valuable asteroids. (Not implemented yet.. Sorry)</p>
                 <button onclick="advanceTechnology()">Cost: <span id="technology_upgrade_cost">500</span></button>
             </div>

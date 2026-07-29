@@ -202,6 +202,14 @@ img.asteroid:hover {
     font-family: 'Orbitron', sans-serif;
 }
 
+.store h3 {
+    margin: 0;
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+}
+
 .store button {
     background-color: #15061f;
     border: 1px solid #df26ff;

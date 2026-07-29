@@ -54,6 +54,7 @@ function upgradeDrill() {
         drill_upgrade_cost = Math.floor(drill_upgrade_cost * 1.5);
         document.getElementById("resource_count").textContent = resource_count;
         document.getElementById("drill_upgrade_cost").textContent = drill_upgrade_cost;
+        document.getElementById("drill_level").textContent = drill_level;
     }
 }
 
@@ -64,6 +65,7 @@ function buyAutoDrill() {
         auto_drill_cost = Math.floor(auto_drill_cost * 1.5);
         document.getElementById("resource_count").textContent = resource_count;
         document.getElementById("auto_drill_cost").textContent = auto_drill_cost;
+        document.getElementById("auto_drill_count").textContent = auto_drill_count;
     }
 }
 
@@ -74,6 +76,7 @@ function advanceTechnology() {
         technology_upgrade_cost = Math.floor(technology_upgrade_cost * 2);
         document.getElementById("resource_count").textContent = resource_count;
         document.getElementById("technology_upgrade_cost").textContent = technology_upgrade_cost;
+        document.getElementById("technology_age").textContent = technology_age;
     }
 }
 
