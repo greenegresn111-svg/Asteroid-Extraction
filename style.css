@@ -43,7 +43,27 @@ img.asteroid:hover {
 }
 
 .floating_text {
-    
+    position: fixed;
+    color: #df26ff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #15061f;
+    pointer-events: none;
+    z-index: 100;
+    animation: floatUpFadeOut 1.5s ease-out forwards;
+}
+
+/* text moves upward and fades out */
+@keyframes floatUpFadeOut {
+    0% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-60px) scale(1.2);
+    }
 }
 
 .resource_counter {

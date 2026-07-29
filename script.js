@@ -10,6 +10,21 @@ document.getElementById("drill_upgrade_cost").textContent = drill_upgrade_cost;
 document.getElementById("auto_drill_cost").textContent = auto_drill_cost;
 document.getElementById("technology_upgrade_cost").textContent = technology_upgrade_cost;
 
+function spawnFloatingText(amount, x, y) {
+    const floatingText = document.createElement("div");
+    floatingText.classList.add("floating_text");
+    floatingText.textContent = "+" + amount;
+    floatingText.style.left = x + "px";
+    floatingText.style.top = y + "px";
+    document.body.appendChild(floatingText);
+
+    setTimeout(() => {
+        floatingText.remove();
+    }, 1500);
+}
+
+
+
 function extractResource() {
     if (technology_age >= 1) {
         resource_count += Math.floor(technology_age * 1) + drill_level;
