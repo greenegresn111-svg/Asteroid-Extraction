@@ -121,7 +121,7 @@ img.asteroid:hover {
     cursor: pointer;
 }
 
-.dyson_fill {
+#dyson_fill {
     position: absolute;
     top: 0;
     left: 0;
