@@ -78,8 +78,18 @@ function advanceTechnology() {
 }
 
 setInterval(() => {
-    resource_count += auto_drill_count;
-    document.getElementById("resource_count").textContent = resource_count;
+    if (auto_drill_count > 0) {
+        resource_count += auto_drill_count;
+        document.getElementById("resource_count").textContent = resource_count;
+
+        const asteroid = document.getElementById("asteroid");
+        const rect = asteroid.getBoundingClientRect();
+
+        let x = rect.left + (Math.random() * rect.width);
+        let y = rect.top + (Math.random() * rect.height);
+
+        spawnFloatingText(auto_drill_count, x, y);
+    }
 }, 1000);
 
 function reset() {
