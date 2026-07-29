@@ -119,7 +119,7 @@ setInterval(() => {
         }
         
         const asteroid = document.querySelector(".asteroid");
-        /* checks if asteroid is set then spawns floating text NOT WORKING?!?!??!?!?!??!?!?!??!?!? */ 
+        /* checks if asteroid is set then spawns floating text */ 
         if (asteroid) {
             const rect = asteroid.getBoundingClientRect();
             let x = rect.left + (Math.random() * rect.width);
