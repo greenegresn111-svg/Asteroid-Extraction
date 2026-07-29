@@ -325,13 +325,23 @@ img.asteroid:hover {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: flex-start;
-        gap: 20px;
+        align-items: stretch;
+        gap: 15px;
     }
 
     .store h1 {
-        width: 100%;
-        margin-bottom: 10px;
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .store::before {
+        content: "";
+        flex-basis: 100%;
+        order: 2;
+    }
+
+    .store_item, .store_bar {
+        order: 3;
     }
 
     .store_item {
@@ -340,6 +350,10 @@ img.asteroid:hover {
     }
 
     .store_bar {
-        display: none;
+        display: block;
+        width: 6px;
+        height: auto;
+        min-height: 150px;
+        background-color: rgb(103, 101, 102);
     }
 }
