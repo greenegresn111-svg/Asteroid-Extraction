@@ -28,17 +28,21 @@ main {
 }
 
 img.asteroid {
-    position: fixed;
+    position: absolute;
     top: 50%;
-    left: calc(37.5% - 15px);
+    left: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
-    height: 300px;
+    width: 30vw;
+    height: 30vw;
+    max-width: 300px;
+    max-height: 300px;
 }
 
 img.asteroid:hover {
-    width: 320px;
-    height: 320px;
+    width: 32vw;
+    height: 32vw;
+    max-width: 320px;
+    max-height: 320px;
     cursor: pointer;
 }
 
@@ -68,9 +72,10 @@ img.asteroid:hover {
 
 .resource_counter {
     /* baseplate background */
-    position: fixed;
-    top: 10px;
-    left: 30%;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     background-size: 100% 100%;
     background-position: center;
     background-color: #15061f;
@@ -94,9 +99,10 @@ img.asteroid:hover {
 
 .dyson_bar {
     /* baseplate background */
-    position: fixed;
-    bottom: 0px;
-    left: 29%;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     background-size: 100% 100%;
     background-position: center;
     background-color: #15061f;
@@ -140,7 +146,7 @@ img.asteroid:hover {
 }
 
 .reset_button {
-    position: fixed;
+    position: absolute;
     left: 16px;
     bottom: 16px;
     padding: 8px 12px;
@@ -158,7 +164,7 @@ img.asteroid:hover {
 }
 
 .version {
-    position: fixed;
+    position: absolute;
     left: 96px;
     bottom: 22px;
     margin: 0;
@@ -169,7 +175,7 @@ img.asteroid:hover {
 
 /* Settings Button Styling */
 .game_space #info_button {
-    position: fixed;
+    position: absolute;
     right: 16px;
     bottom: 16px;
     padding: 8px 12px;
@@ -197,7 +203,7 @@ img.asteroid:hover {
 }
 
 #dev_tool_button {
-    position: fixed;
+    position: absolute;
     left: 150px;
     bottom: 16px;
     padding: 8px 12px;
@@ -292,4 +298,48 @@ img.asteroid:hover {
     height: 6px;
     background-color: rgb(103, 101, 102);
     opacity: 1;
+}
+
+@media (max-width: 1024px) {
+    main {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .game_space {
+        flex: none;
+        width: 100%;
+        height: 65vh;
+    }
+
+    .bar {
+        width: 100%;
+        height: 15px;
+    }
+
+    .store {
+        flex: none;
+        width: 100%;
+        padding: 30px 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .store h1 {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .store_item {
+        flex: 1 1 250px;
+        max-width: 300px;
+    }
+
+    .store_bar {
+        display: none;
+    }
 }
