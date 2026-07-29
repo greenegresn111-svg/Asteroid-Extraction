@@ -168,11 +168,6 @@ function toggleInfo() {
     boost_info_button.forEach(info => {
         info.classList.toggle("hidden");
     });
-
-    const store_spacing = document.querySelectorAll(".store_item");
-    store_spacing.forEach(store_item => {
-        store_item.style.gap = "15px";
-    });
 }
 
 function devTool(event) {
