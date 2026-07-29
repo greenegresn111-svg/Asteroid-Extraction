@@ -11,7 +11,7 @@
         
         <section class="game_space">
             <div class="resource_counter"><span id="resource_count"> 0</span></div>
-            <img class="asteroid" src="images/asteroid.png" alt="Asteroid" onclick="extractResource()">
+            <img class="asteroid" src="images/asteroid.png" alt="Asteroid" onclick="extractResource(event)">
             <div class="dyson_bar"><span>Dyson Swarm Completion 0/1000</span></div>
             <button class="reset_button" onclick="reset()">Reset</button>
             <p class="version">v.0.1</p>
@@ -36,7 +36,7 @@
             <div class="store_item">
                 <h2>Advance Technology</h2>
                 <p>Unlock advanced technologies to explore more valuable asteroids. (Not implemented yet.. Sorry)</p>
-                <button>Cost: N/A</button>
+                <button onclick="advanceTechnology()">Cost: <span id="technology_upgrade_cost">500</span></button>
             </div>
         </section>
     
