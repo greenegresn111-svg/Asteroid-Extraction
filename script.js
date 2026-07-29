@@ -5,6 +5,7 @@ let drill_level = 0;
 let auto_drill_count = 0;
 let technology_age = 0;
 let technology_upgrade_cost = 500;
+const dyson_goal = 100000;
 
 document.getElementById("drill_upgrade_cost").textContent = drill_upgrade_cost;
 document.getElementById("auto_drill_cost").textContent = auto_drill_cost;
@@ -23,26 +24,41 @@ function spawnFloatingText(amount, x, y) {
     }, 1500);
 }
 
+function updateDysonBar() {
+    let percent = (resource_count / dyson_goal) * 100;
+    if (percent > 100) percent = 100;
 
+    document.getElementById("dyson_fill").style.width = percent + "%";
+    document.getElementById("dyson_text").textContent =  `Dyson Swarm Completion ${Math.floor(percent)}%`;
+}
 
 function extractResource(event) {
     let amountGained = 0;
 
     if (technology_age >= 1) {
-        amountGained = Math.floor(technology_age * 1) + drill_level;
+        if (drill_level == 0) {
+            amountGained = Math.floor(technology_age * 2);
+        } else if (drill_level == 1) {
+            amountGained = Math.floor(technology_age * 2) + 1;
+        } else {
+            amountGained = Math.floor(technology_age * 2) * drill_level;
+        }
     } else {
         amountGained = 1 + drill_level;
     }
+
     resource_count += amountGained;
     document.getElementById("resource_count").textContent = resource_count;
+
+    updateDysonBar();
 
     /* grabs the mouse click coordinates */
     let x = event.clientX;
     let y = event.clientY;
 
     /* randomly offset the floating text */
-    x += (Math.random() - 0.5) * 40;
-    y += (Math.random() - 0.5) * 40;
+    x += (Math.random() - 0.5) * 50;
+    y += (Math.random() - 0.5) * 50;
 
     spawnFloatingText(amountGained, x, y);
 }
@@ -81,28 +97,43 @@ function advanceTechnology() {
 }
 
 setInterval(() => {
+    let amountGained = 0;
     if (auto_drill_count > 0) {
-        resource_count += auto_drill_count;
-        document.getElementById("resource_count").textContent = resource_count;
+        if (technology_age > 0) {
+            amountGained = Math.floor(technology_age * 2) * auto_drill_count;
+        } else {
+            amountGained = auto_drill_count;
+        }
+    }
 
-        const asteroid = document.getElementById("asteroid");
+    resource_count += amountGained;
+    document.getElementById("resource_count").textContent = resource_count;
+
+    updateDysonBar();
+
+    const asteroid = document.getElementById("asteroid");
+    /* checks if asteroid is set then spawns floating text NOT WORKING?!?!??!?!?!??!?!?!??!?!? */ 
+    if (asteroid) {
         const rect = asteroid.getBoundingClientRect();
-
         let x = rect.left + (Math.random() * rect.width);
         let y = rect.top + (Math.random() * rect.height);
-
-        spawnFloatingText(auto_drill_count, x, y);
+        spawnFloatingText(amountGained, x, y);
     }
 }, 1000);
+
+setInterval(() => {
+    updateDysonBar();
+}, 100);
 
 function reset() {
     resource_count = 0;
     auto_drill_count = 0;
     drill_level = 0;
+    technology_age = 0;
     drill_upgrade_cost = 100;
     auto_drill_cost = 200;
-    technology_age = 0;
     technology_upgrade_cost = 500;
+
     document.getElementById("resource_count").textContent = resource_count;
     document.getElementById("drill_upgrade_cost").textContent = drill_upgrade_cost;
     document.getElementById("auto_drill_cost").textContent = auto_drill_cost;
@@ -110,4 +141,15 @@ function reset() {
     document.getElementById("drill_level").textContent = drill_level;
     document.getElementById("auto_drill_count").textContent = auto_drill_count;
     document.getElementById("technology_age").textContent = technology_age;
+
+    updateDysonBar();
+}
+
+function devTool(event) {
+    let button = document.getElementById(event.target.id);
+
+    if (button.id == "dev_tool_button") {
+        resource_count += 1000;
+        document.getElementById("resource_count").textContent = resource_count;
+    }
 }

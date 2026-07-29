@@ -121,6 +121,24 @@ img.asteroid:hover {
     cursor: pointer;
 }
 
+.dyson_fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    background-color: rgba(223, 38, 255, 0.4);
+    z-index: 1;
+    /* animates the bar as it fills */
+    transition: width 0.25s ease;
+    
+}
+
+.dyson_bar span {
+    position: relative;
+    z-index: 2;
+}
+
 .reset_button {
     position: fixed;
     left: 16px;
@@ -147,6 +165,25 @@ img.asteroid:hover {
     color: #6900aa;
     font-family: 'Orbitron', sans-serif;
     font-size: 16px;
+}
+
+#dev_tool_button {
+    position: fixed;
+    left: 150px;
+    bottom: 16px;
+    padding: 8px 12px;
+    border: 1px solid #df26ff;
+    border-radius: 6px;
+    background-color: #15061f;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    z-index: 50;
+}
+
+#dev_tool_button:hover {
+    background-color: #df26ff;
+    color: #15061f;
 }
 
 .bar {
