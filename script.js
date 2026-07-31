@@ -11,6 +11,17 @@ document.getElementById("drill_upgrade_cost").textContent = drill_upgrade_cost;
 document.getElementById("auto_drill_cost").textContent = auto_drill_cost;
 document.getElementById("technology_upgrade_cost").textContent = technology_upgrade_cost;
 
+function startGame() {
+    const titleScreen = document.getElementById("title_screen");
+
+    titleScreen.style.opacity = "0";
+
+    setTimeout(() => {
+        titleScreen.classList.add("hidden");
+    }, 500);
+}
+
+
 function spawnFloatingText(amount, x, y) {
     const floatingText = document.createElement("div");
     floatingText.classList.add("floating_text");

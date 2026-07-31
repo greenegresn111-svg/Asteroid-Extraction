@@ -7,6 +7,58 @@ body {
     font-family: 'Orbitron', sans-serif;
 }
 
+.title_state {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #15061f;
+    background-image: url('images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+.game_title {
+    color: #df26ff;
+    font-size: 64px;
+    text-shadow: 0 0 15px #df26ff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.subtitle {
+    color: #ffffff;
+    font-size: 24px;
+    margin: 0 50px 50px 50px;
+    text-align: center;
+}
+
+#start_button {
+    background-color: #15061f;
+    border: 2px solid #df26ff;
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 24px;
+    padding: 15px 40px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#start_button:hover {
+    background-color: #df26ff;
+    color: #15061f;
+    box-shadow: 0 0 20px rgba(223, 38, 255, 0.6);
+}
+
+
 main {
     display: flex;
     width: 100%;
