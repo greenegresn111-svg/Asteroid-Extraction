@@ -7,13 +7,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    
     <div id="title_screen" class="title_state">
         <h1 class="game_title">Asteroid Extraction</h1>
         <p class="subtitle">Extract resources from an asteroid to upgrade your drill and build a Dyson Swarm!</p>
         <button id="start_button" onclick="startGame()">Start Game</button>
     </div>
+
     <main>
-        
         <section class="game_space">
             <div class="resource_counter"><span id="resource_count"> 0</span></div>
             <img id="asteroid" class="asteroid" src="images/asteroid.png" alt="Asteroid" onclick="extractResource(event)">
@@ -53,11 +54,14 @@
             </div>
         </section>
 
+        <!--
+        
         <button id="dev_tool_button" class="hidden" onclick="devTool(event)">Dev Tool</button>
 
-    
+        This (and all other "dev button" code) were left in my code intentionally, as a sort of easter egg. 
+        Thank you for looking so deeply into my project! <3
 
-    
+        -->
     
     </main>
     <script src="script.js"></script>
