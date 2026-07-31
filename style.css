@@ -135,7 +135,6 @@ img.asteroid:hover {
     width: 0%;
     background-color: rgba(223, 38, 255, 0.4);
     z-index: 1;
-    /* animates the bar as it fills */
     transition: width 0.25s ease;
     
 }
@@ -173,7 +172,6 @@ img.asteroid:hover {
     font-size: 16px;
 }
 
-/* Settings Button Styling */
 .game_space #info_button {
     position: absolute;
     right: 16px;
@@ -200,6 +198,25 @@ img.asteroid:hover {
 
 .hidden {
     display: none;
+}
+
+#credits_button {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    padding: 8px 12px;
+    border: 1px solid #df26ff;
+    border-radius: 6px;
+    background-color: #15061f;
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    cursor: pointer;
+    z-index: 50;
+}
+
+#credits_button:hover {
+    background-color: #df26ff;
+    color: #15061f;
 }
 
 #dev_tool_button {

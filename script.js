@@ -170,6 +170,11 @@ function toggleInfo() {
     });
 }
 
+function toggleCredits() {
+    // Placeholder for your future credits text or modal logic
+    alert("Credits:\n\nDeveloper: Brent Greene\nArt: \n1. Asteroid- https://www.magnific.com/free-psd/isolated-dark-grey-asteroid-3d-render-space-rock_409843503.htm#fromView=keyword&page=1&position=0&uuid=586ce27d-16b1-4656-9d97-ce6001e6c1d2&query=Asteroid \n2. Space Background- https://www.magnific.com/free-vector/realistic-galaxy-background_14960493.htm#fromView=keyword&page=1&position=0&uuid=bf1eacbf-7595-461c-aca1-6b7b7f9f10be&query=Space+background");
+}
+
 function devTool(event) {
     let button = document.getElementById(event.target.id);
 
